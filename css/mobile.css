@@ -1,0 +1,16 @@
+@media handheld
+{
+    html, body
+    {
+        font: 12px/15px sans-serif;
+        padding: 3px;
+        margin: 0;
+    }
+    
+    h1,h2,h3,h4,h5,h6
+    {
+        font-weight: normal;
+    }
+    
+    
+}
