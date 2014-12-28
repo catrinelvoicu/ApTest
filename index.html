@@ -1,37 +1,30 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=1" />
-     <!--   <link media="Screen" href="styles.css" type="text/css" rel="stylesheet" />-->
-        <link media="handheld, only screen and (max-width:480px), only screen and (max-device-width:480px)" href="css/mobile.css" type="text/css" rel="stylesheet" />
-        <script type="text/javascript" src="cordova-2.2.0.js"></script>
-        
-        <title>Text Content</title>
-    </head>
-    <body
-        <h1>This is an H1</h1>
-        <h2>This is an H2</h2>
-        <h3>This is an H3</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae lacus non tellus bibendum fermentum vitae sit amet magna. Pellentesque id purus ac est tempus gravida. Donec elementum porttitor luctus. Sed venenatis consequat tempus. Suspendisse a est ac mi hendrerit interdum eget et massa. Mauris ut eros nisl, varius mattis metus. In at dolor non nibh laoreet congue. Etiam viverra lobortis hendrerit. Etiam sapien nulla, auctor vitae dictum ut, congue gravida magna. Morbi et elementum justo. Aliquam erat volutpat. Nam massa orci, dignissim convallis ultricies eget, pharetra at tortor.</p>
-    </body>
+  <head>
+    <title>Device Properties Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+        element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
+                            'Device Cordova: '  + device.cordova  + '<br />' +
+                            'Device Platform: ' + device.platform + '<br />' +
+                            'Device UUID: '     + device.uuid     + '<br />' +
+                            'Device Model: '    + device.model    + '<br />' +
+                            'Device Version: '  + device.version  + '<br />';
+    }
+
+    </script>
+  </head>
+  <body>
+    <p id="deviceProperties">Loading device properties...</p>
+  </body>
 </html>
